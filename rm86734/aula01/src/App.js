@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
+import logoCurso from './img/logo-1tdsj.png'
+//Importando o componenete para utilização 
+import Menu from './componentes/Menu'
 
-function App() {
+export default function App() {
+  const aluno = 'Guilherme Oliveira'
+  const curso = '1TDSJ'
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <nav>
+          <Menu/>
+        </nav>
+
+        <h2>Nome do Aluno</h2>
+        <h2>Curso: 1TDSJ </h2>
+        <div>
+          <img src={logoCurso}/>
+        </div>
       </header>
     </div>
   );
 }
-
-export default App;
