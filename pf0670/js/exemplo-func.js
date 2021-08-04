@@ -13,6 +13,9 @@ function alteraTitulo(){
     //Recuperando o ID com querySelector
     //const titulo = document.getElementById('titulo1')    
     titulo.style.backgroundColor = '#ff0000'
+    
+
+
 }
 
 //titulo.addEventListener('click', alteraTitulo)
