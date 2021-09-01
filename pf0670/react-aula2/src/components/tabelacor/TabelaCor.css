@@ -1,0 +1,32 @@
+
+.tbl-cores,td{
+    border: 1px solid #fff;
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd) td:nth-child(odd){
+    background-color: green;
+}
+
+tr:nth-child(odd) td:nth-child(even){
+    background-color: red;
+}
+
+
+tr:nth-child(even) td:nth-child(odd){
+    background-color: blue;
+}
+
+tr:nth-child(even) td:nth-child(even){
+    background-color: blueviolet;
+}
+
+.tbl-cores{
+   transform: scale(70%);
+   transition: ease-in transform 0.2s;
+}
+
+.tbl-cores:hover{
+    transform: scale(150%);
+}
+
