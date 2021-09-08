@@ -7,9 +7,7 @@ export default function Corpo(props) {
     return (
 
         <section>
-            <div onClick={() => props.alteraExemplo(props.valorExemplo)}>
-                {props.elemento}
-            </div>
+            <h2>Corpo</h2>
         </section>
     )
 }

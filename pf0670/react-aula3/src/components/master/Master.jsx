@@ -1,21 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Corpo from '../corpo/Corpo'
 import Header from '../header/Header'
 
 export default function Master() {
 
-    const [componente, setComponente] = useState('<Corpo />')
 
     return (
         <div>
-            <Header acao={setComponente}>
-                <span>Exemplo</span>
-                <span>Exemplo</span>
-                <span>Exemplo</span>
+            <Header login={true}>
+                <li>
+                    <form>
+                        <input type="submit" value="Login" />
+                        <input type="text" />
+                    </form>
+                </li>
+                <p>Informações</p>
             </Header>
-            <div>
-                {componente}
-            </div>
+
+            <Corpo />
         </div>
     )
 }
