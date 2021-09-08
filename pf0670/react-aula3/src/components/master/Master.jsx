@@ -1,23 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Corpo from '../corpo/Corpo'
 import Header from '../header/Header'
 
 export default function Master() {
+    const [conteudo, setConteudo] = useState(<Header />)
+    const alteraConteudo = () => {
 
+        if (window.screen.width >= 550) {
+            setConteudo(<Header />)
+        } else {
+            setConteudo(<Corpo />)
+        }
+    }
 
     return (
         <div>
-            <Header login={true}>
-                <li>
-                    <form>
-                        <input type="submit" value="Login" />
-                        <input type="text" />
-                    </form>
-                </li>
-                <p>Informações</p>
-            </Header>
+            {
+                window.onresize = () => {
+                    clearTimeout();
+                    setTimeout(alteraConteudo, 100);
+                }
+            }
 
-            <Corpo />
+            {conteudo}
+
         </div>
     )
 }
